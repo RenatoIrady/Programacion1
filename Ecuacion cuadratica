@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include "math.h"
+
+int main(void)
+{ Float a,b,c,D, X1,X2,PR,PC; 
+  scanf("%f%f%f",&a,&b,&c);
+  D=b*b-4*a*c;
+  if(D>=0)
+   {X1=(-b+sqrt(D))/(2*a);
+    X2=(-b-sqrt(D))/(2*a);
+	printf("\n x1= %f x2=%f", X1,X2);
+   }
+  else
+  {PR=-b/(2*a);
+   PC=sqrt(-D)/(2*a);
+   printf("\n Complejo 1= %f + %f i",PR,PC);
+   printf("\n Complejo 2= %f - %f i",PR,PC);
+  }
+
+	return 0;
+}
