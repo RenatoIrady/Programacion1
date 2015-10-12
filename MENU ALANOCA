@@ -1,0 +1,39 @@
+#include "stdafx.h"
+
+
+int main(void)
+{int opcion, i,signo, N;
+ float S, P, X;
+ do{
+	 printf("\n  MENU ");
+	 printf("\n - - - -");
+	 printf("\n 1.-Sumatoria X/1! + X^2/2! + X^3/3! + X^N/N!");
+	 printf("\n 2.-Contar el numero de digitos de un numero entero ");
+	 printf("\n 3.-Sumatoria X - X^2 + X^3.... +- X^N");
+	 printf("\n 4.-FIN \n ");
+	 scanf("%d", opcion);
+	 switch(opcion)
+		{case 1:break; 
+		 case 2:break;
+		 case 3: printf("\n Digite N y X:");
+			     scanf("%d%f", &N, &X);
+				 S=0;
+				 P=X;
+				 signo=1;
+				 i=1;
+				 while(i<=N)
+			      {S=S+signo*P;
+				   P=P*X;
+				   signo=signo*(-1);
+				   i++;
+				   }
+				 printf("\n Sumatoria es: %f", S);
+				 break;
+		  case 4: printf("\n Gracias!!");
+			     break;
+		  default: printf("\n Error de Opcion");
+        }
+     }
+    while(opcion!=4);
+    return 0;
+}
