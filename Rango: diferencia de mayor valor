@@ -1,0 +1,43 @@
+#include "stdafx.h"
+#define NMAX 100
+
+void LEER_VEC(int*A, int n);
+int MAYOR_VEC(int*A,int n);
+int MENOR_VEC(int*A,int n);
+
+int main(void)
+{ int n,A[NMAX],x,y,R;
+	scanf("%d",&n);
+	LEER_VEC(A,n);
+	x= MAYOR_VEC(A,n);
+	y= MENOR_VEC(A,n);
+	R= x-y;
+	printf("\n Rango: %d", R);
+	return 0;
+}
+
+void LEER_VEC(int*A, int n)
+{int i;
+  for(i=0;i<n;i++)
+  {scanf("%d", &A[i]);}
+}
+
+int MAYOR_VEC(int*A,int n)
+{int i,MAX;
+ MAX= A[0] ;
+  for(i=1;i<n;i++)
+  {if(A[i]>MAX)
+   {MAX=A[i];}
+  }
+  return MAX;
+}
+
+int MENOR_VEC(int*A,int n)
+ {int i, menor;
+  menor= A[0];
+   for(i=0;i<n;i++)
+   {if(A[i]<menor)
+     {menor= A[i];}
+   }
+ return menor;
+ }
